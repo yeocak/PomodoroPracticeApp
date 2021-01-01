@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/middleBackground"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_rectang"
+        android:backgroundTintMode="screen"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etChangeWork"
+                android:layout_width="50dp"
+                android:layout_height="39dp"
+                android:layout_margin="10dp"
+                android:inputType="time"
+                android:padding="10dp"
+                android:textColor="@color/textWhite" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:text="Minutes"
+                android:textColor="@color/textWhite"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btChangeWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/unmain_rectang"
+                android:backgroundTint="@color/textWhiteSoft"
+                android:padding="10dp"
+                android:text="Change Work Time" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etChangeShort"
+                android:layout_width="50dp"
+                android:layout_height="39dp"
+                android:layout_margin="10dp"
+                android:inputType="time"
+                android:padding="10dp"
+                android:textColor="@color/textWhite" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:text="Minutes"
+                android:textColor="@color/textWhite"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btChangeShort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/unmain_rectang"
+                android:backgroundTint="@color/textWhiteSoft"
+                android:padding="10dp"
+                android:text="Change Short Break Time" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etChangeLong"
+                android:layout_width="50dp"
+                android:layout_height="39dp"
+                android:layout_margin="10dp"
+                android:inputType="time"
+                android:padding="10dp"
+                android:textColor="@color/textWhite" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:text="Minutes"
+                android:textColor="@color/textWhite"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btChangeLong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/unmain_rectang"
+                android:backgroundTint="@color/textWhiteSoft"
+                android:padding="10dp"
+                android:text="Change Long Break Time" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <Button
+            android:id="@+id/btGoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/backgroundStudy"
+            android:onClick="goBack"
+            android:text="Go Back" />
+
+        <Button
+            android:id="@+id/btPomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/backgroundBreakHard"
+            android:text="What is Pomodoro?" />
+
+        <Button
+            android:id="@+id/btGithub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:backgroundTint="#f66a0a"
+            android:text="GO GITHUB" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
