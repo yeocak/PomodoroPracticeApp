@@ -1,5 +1,6 @@
 package com.example.pomodoropracticeapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -13,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.view.*
 class MainActivity : AppCompatActivity() {
 
     /* TODO
-    * Make settings tab effectively
+    * Make timer in another class
     */
 
     lateinit var timer: CountDownTimer
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        TimeDatas.defaultTime = TimeDatas.defaultWork
         updateTimer(TimeDatas.defaultWork)
         TimeDatas.nowTime = TimeDatas.defaultWork
     }

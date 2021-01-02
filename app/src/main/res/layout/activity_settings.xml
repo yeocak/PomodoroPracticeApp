@@ -23,10 +23,22 @@
             android:layout_margin="5dp"
             android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:text="Change work time:            "
+                android:textColor="@color/textWhite"
+                android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/etChangeWork"
                 android:layout_width="50dp"
                 android:layout_height="39dp"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:inputType="time"
                 android:padding="10dp"
@@ -38,20 +50,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="sans-serif-black"
                 android:text="Minutes"
-                android:textColor="@color/textWhite"
                 android:textSize="20sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btChangeWork"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/unmain_rectang"
-                android:backgroundTint="@color/textWhiteSoft"
-                android:padding="10dp"
-                android:text="Change Work Time" />
         </LinearLayout>
 
         <LinearLayout
@@ -60,10 +61,22 @@
             android:layout_margin="5dp"
             android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:text="Change short break time:"
+                android:textColor="@color/textWhite"
+                android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/etChangeShort"
                 android:layout_width="50dp"
                 android:layout_height="39dp"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:inputType="time"
                 android:padding="10dp"
@@ -73,22 +86,11 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:fontFamily="sans-serif-black"
+                android:layout_weight="1"
                 android:text="Minutes"
-                android:textColor="@color/textWhite"
                 android:textSize="20sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btChangeShort"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/unmain_rectang"
-                android:backgroundTint="@color/textWhiteSoft"
-                android:padding="10dp"
-                android:text="Change Short Break Time" />
         </LinearLayout>
 
         <LinearLayout
@@ -97,10 +99,22 @@
             android:layout_margin="5dp"
             android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:text="Change long break time: "
+                android:textColor="@color/textWhite"
+                android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/etChangeLong"
                 android:layout_width="50dp"
                 android:layout_height="39dp"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:inputType="time"
                 android:padding="10dp"
@@ -112,20 +126,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="sans-serif-black"
                 android:text="Minutes"
-                android:textColor="@color/textWhite"
                 android:textSize="20sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btChangeLong"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/unmain_rectang"
-                android:backgroundTint="@color/textWhiteSoft"
-                android:padding="10dp"
-                android:text="Change Long Break Time" />
         </LinearLayout>
     </LinearLayout>
 
@@ -148,7 +151,7 @@
             android:id="@+id/btGoBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="10dp"
             android:backgroundTint="@color/backgroundStudy"
             android:onClick="goBack"
             android:text="Go Back" />
@@ -157,7 +160,7 @@
             android:id="@+id/btPomodoro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="10dp"
             android:backgroundTint="@color/backgroundBreakHard"
             android:text="What is Pomodoro?" />
 
@@ -165,7 +168,7 @@
             android:id="@+id/btGithub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="10dp"
             android:backgroundTint="#f66a0a"
             android:text="GO GITHUB" />
     </LinearLayout>

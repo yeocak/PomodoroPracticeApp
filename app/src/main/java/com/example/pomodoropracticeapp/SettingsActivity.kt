@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_settings.*
 
 class SettingsActivity : AppCompatActivity() {
@@ -15,19 +16,6 @@ class SettingsActivity : AppCompatActivity() {
         etChangeWork.setText((TimeDatas.defaultWork/60000).toString())
         etChangeShort.setText((TimeDatas.defaultShort/60000).toString())
         etChangeLong.setText((TimeDatas.defaultLong/60000).toString())
-
-        btChangeWork.setOnClickListener {
-            TimeDatas.defaultWork = etChangeWork.text.toString().toLong()*60000
-        }
-
-        btChangeShort.setOnClickListener {
-            TimeDatas.defaultShort = etChangeShort.text.toString().toLong()*60000
-        }
-
-        btChangeLong.setOnClickListener {
-            TimeDatas.defaultLong = etChangeLong.text.toString().toLong()*60000
-        }
-
 
         btGithub.setOnClickListener{
             val intenting = Intent(Intent.ACTION_VIEW)
@@ -42,7 +30,18 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     fun goBack(v: View){
-        val intenting = Intent(this,MainActivity::class.java)
-        startActivity(intenting)
+        if(etChangeWork.text.isNotEmpty() && etChangeShort.text.isNotEmpty() && etChangeLong.text.isNotEmpty()){
+            TimeDatas.defaultWork = etChangeWork.text.toString().toLong()*60000
+            TimeDatas.defaultShort = etChangeShort.text.toString().toLong()*60000
+            TimeDatas.defaultLong = etChangeLong.text.toString().toLong()*60000
+
+            val intenting = Intent(this,MainActivity::class.java)
+            startActivity(intenting)
+        }
+        else{
+            Toast.makeText(this, "You must fill all the field.", Toast.LENGTH_SHORT).show()
+        }
+
+
     }
 }
